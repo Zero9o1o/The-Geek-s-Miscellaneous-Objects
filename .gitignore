@@ -1,11 +1,25 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
+## gradle
+/.gradle
+/build
+/gradle
+/gradlew
+/gradlew.bat
 
-# Other files and folders
-.settings/
+## ForgeGradle
+/run
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+## eclipse
+/eclipse
+/.settings
+/.metadata
+/.classpath
+/.project
+/bin
+
+## intellij
+/out
+/.idea
+/*.iml
+/*.ipr
+/*.iws
+/atlassian-ide-plugin.xml
