@@ -1,0 +1,16 @@
+[
+{
+  "modid": "geekmiscobject",
+  "name": "The Geeks's Miscellanceous Objects",
+  "description": "A mod made by a few of ZeekdaGeek's geeks for some misc objects that were asked for.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Zero"],
+  "credits": "People do credits ?.?",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
