@@ -1,6 +1,7 @@
 package zero9010.miscobjects.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import zero9010.miscobjects.item.ItemKnife;
 import zero9010.miscobjects.item.ItemRation;
 import zero9010.miscobjects.reference.Names;
 import zero9010.miscobjects.reference.Reference;
@@ -10,10 +11,12 @@ import zero9010.miscobjects.reference.Reference;
 public class initItem {
 
     public static final ItemRation ItemRation = new ItemRation();
+    public static final ItemKnife ItemKnife = new ItemKnife();
 
     public static void init(){
 
         GameRegistry.registerItem(ItemRation, Names.Items.RATION);
+        GameRegistry.registerItem(ItemKnife, Names.Weapons.KNIFE);
 
     }
 
