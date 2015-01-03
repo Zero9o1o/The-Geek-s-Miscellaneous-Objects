@@ -1,6 +1,8 @@
 package zero9010.miscobjects.item;
 
 import zero9010.miscobjects.reference.Reference;
+import zero9010.miscobjects.creativetab.creativeTab;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -12,6 +14,7 @@ public class ItemMO extends Item
     public ItemMO ()
     {
         super();
+        setCreativeTab(creativeTab.miscobjects);
     }
 
     @Override
