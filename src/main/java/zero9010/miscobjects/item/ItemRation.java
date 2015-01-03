@@ -4,8 +4,10 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemStack;
 import zero9010.miscobjects.creativetab.creativeTab;
 import zero9010.miscobjects.reference.Names;
+import zero9010.miscobjects.reference.Reference;
 
 public class ItemRation  extends ItemFood{
     public ItemRation()
@@ -13,6 +15,18 @@ public class ItemRation  extends ItemFood{
         super(2, 0.3F,false);
         this.setUnlocalizedName(Names.Items.RATION);
         setCreativeTab(creativeTab.miscobjects);
+    }
+
+    @Override
+    public String getUnlocalizedName()
+    {
+        return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+    }
+
+    @Override
+    public String getUnlocalizedName(ItemStack itemStack)
+    {
+        return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     @Override
