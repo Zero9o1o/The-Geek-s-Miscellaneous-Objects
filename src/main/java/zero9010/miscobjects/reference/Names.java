@@ -5,4 +5,9 @@ public final class Names {
     {
         public static final String RATION = "Rations";
     }
+
+    public static final class Weapons
+    {
+        public static final String KNIFE = "Knife";
+    }
 }
