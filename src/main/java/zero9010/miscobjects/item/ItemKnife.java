@@ -15,15 +15,14 @@ import java.util.List;
 
 public class ItemKnife extends ItemSword {
 
-    public ItemKnife(){
+    public ItemKnife() {
 
-        super(Item.ToolMaterial.IRON);
+        super(ItemMO.IRONMO);
         this.setCreativeTab(creativeTab.miscobjects);
         this.maxStackSize = 1;
         this.setUnlocalizedName(Names.Weapons.KNIFE);
 
     }
-
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack itemStack, EntityPlayer EntityPlayer, List list, boolean Boolean) {

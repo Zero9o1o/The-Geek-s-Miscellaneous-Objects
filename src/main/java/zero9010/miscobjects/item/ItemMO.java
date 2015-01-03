@@ -1,5 +1,6 @@
 package zero9010.miscobjects.item;
 
+import net.minecraftforge.common.util.EnumHelper;
 import zero9010.miscobjects.reference.Reference;
 import zero9010.miscobjects.creativetab.creativeTab;
 
@@ -16,6 +17,7 @@ public class ItemMO extends Item
         super();
         setCreativeTab(creativeTab.miscobjects);
     }
+    public static ToolMaterial IRONMO = EnumHelper.addToolMaterial("IRONMO",2,250,6.0F,1.5F,0);
 
     @Override
     public String getUnlocalizedName()
