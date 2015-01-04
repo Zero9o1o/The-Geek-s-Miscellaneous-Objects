@@ -16,6 +16,7 @@ public class ItemToast extends ItemFood {
         super(5,0.4F,false);
         this.setUnlocalizedName(Names.Items.TOAST);
         this.setCreativeTab(creativeTab.miscobjects);
+        this.setAlwaysEdible();
     }
 
     @Override

@@ -15,6 +15,7 @@ public class ItemRation  extends ItemFood{
         super(2, 0.3F,false);
         this.setUnlocalizedName(Names.Items.RATION);
         setCreativeTab(creativeTab.miscobjects);
+        this.setAlwaysEdible();
     }
 
     @Override
