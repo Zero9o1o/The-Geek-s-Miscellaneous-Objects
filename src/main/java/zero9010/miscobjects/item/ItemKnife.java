@@ -7,7 +7,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.world.World;
 import zero9010.miscobjects.creativetab.creativeTab;
+import zero9010.miscobjects.entities.EntityTent;
 import zero9010.miscobjects.reference.Names;
 import zero9010.miscobjects.reference.Reference;
 
@@ -54,4 +56,5 @@ public class ItemKnife extends ItemSword {
     {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
+
 }
