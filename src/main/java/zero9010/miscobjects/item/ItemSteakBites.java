@@ -9,14 +9,13 @@ import zero9010.miscobjects.creativetab.creativeTab;
 import zero9010.miscobjects.reference.Names;
 import zero9010.miscobjects.reference.Reference;
 
-public class ItemToast extends ItemFood {
-
-    public ItemToast()
+public class ItemSteakBites extends ItemFood {
+    public ItemSteakBites()
     {
-        super(5,0.4F,false);
-        this.setUnlocalizedName(Names.Items.TOAST);
-        this.setCreativeTab(creativeTab.miscobjects);
-        this.setAlwaysEdible();
+        super(2, 0.3F,true);
+        this.setUnlocalizedName(Names.Items.STEAKBITES);
+        setCreativeTab(creativeTab.miscobjects);
+
     }
 
     @Override
@@ -42,5 +41,7 @@ public class ItemToast extends ItemFood {
     {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
+
+
 
 }

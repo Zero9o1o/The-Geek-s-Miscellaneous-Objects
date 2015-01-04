@@ -13,6 +13,7 @@ public class initItem {
     public static final ItemKnife ItemKnife = new ItemKnife();
     public static final ItemToast ItemToast = new ItemToast();
     public static final ItemSteakStrips ItemSteakStrips = new ItemSteakStrips();
+    public static final ItemSteakBites ITEM_STEAK_BITES = new ItemSteakBites();
 
     public static void init(){
 
@@ -20,6 +21,7 @@ public class initItem {
         GameRegistry.registerItem(ItemKnife, Names.Weapons.KNIFE);
         GameRegistry.registerItem(ItemToast, Names.Items.TOAST);
         GameRegistry.registerItem(ItemSteakStrips, Names.Items.STEAKSTRIPS);
+        GameRegistry.registerItem(ITEM_STEAK_BITES, Names.Items.STEAKBITES);
 
     }
 

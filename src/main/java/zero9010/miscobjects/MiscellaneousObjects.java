@@ -8,7 +8,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 import zero9010.miscobjects.init.craftingRecipes;
 import zero9010.miscobjects.init.initBlocks;
-import zero9010.miscobjects.init.initEntities;
 import zero9010.miscobjects.proxy.CommonProxy;
 import zero9010.miscobjects.reference.Reference;
 import zero9010.miscobjects.init.initItem;
@@ -33,7 +32,6 @@ public class MiscellaneousObjects
 
         craftingRecipes.init();
         proxy.initRenderers();
-        initEntities.init();
 
     }
 

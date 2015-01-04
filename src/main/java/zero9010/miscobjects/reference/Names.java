@@ -6,6 +6,7 @@ public final class Names {
         public static final String RATION = "Rations";
         public static final String TOAST = "Toast";
         public static final String STEAKSTRIPS = "SteakStrips";
+        public static final String STEAKBITES ="SteakBites";
         public static final String TENT = "TENT";
     }
 
