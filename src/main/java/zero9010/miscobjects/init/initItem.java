@@ -1,10 +1,7 @@
 package zero9010.miscobjects.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import zero9010.miscobjects.item.ItemKnife;
-import zero9010.miscobjects.item.ItemRation;
-import zero9010.miscobjects.item.ItemSteakStrips;
-import zero9010.miscobjects.item.ItemToast;
+import zero9010.miscobjects.item.*;
 import zero9010.miscobjects.reference.Names;
 import zero9010.miscobjects.reference.Reference;
 
