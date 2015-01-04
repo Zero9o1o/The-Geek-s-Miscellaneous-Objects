@@ -10,7 +10,7 @@ import zero9010.miscobjects.reference.Reference;
 
 public class creativeTab {
 
-    public static  final CreativeTabs miscobjects = new CreativeTabs(Reference.MOD_ID) {
+    public static final CreativeTabs miscobjects = new CreativeTabs(Reference.MOD_ID) {
         @Override
         public Item getTabIconItem() {
 
@@ -20,8 +20,7 @@ public class creativeTab {
 
         @Override
         @SideOnly(Side.CLIENT)
-        public String getTranslatedTabLabel()
-        {
+        public String getTranslatedTabLabel() {
             return StatCollector.translateToLocal("key.categories.miscobjects");
         }
 

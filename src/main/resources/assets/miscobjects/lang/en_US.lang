@@ -4,4 +4,7 @@ item.miscobjects:Toast.name=Toast
 item.miscobjects:SteakStrips.name=Steak Strips
 item.miscobjects:SteakBites.name=Steak Bites
 
+
+tile.miscobjects:Tent.name=Restart Tent
+
 key.categories.miscobjects=The Geeks's Miscellaneous Objects

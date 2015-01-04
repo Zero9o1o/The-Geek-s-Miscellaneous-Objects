@@ -10,7 +10,7 @@ import zero9010.miscobjects.init.initBlocks;
 import zero9010.miscobjects.reference.ModelsID;
 import zero9010.miscobjects.tileEntity.TileEntityTent;
 
-public class ClientProxy extends CommonProxy{
+public class ClientProxy extends CommonProxy {
 
     @Override
     public void initSounds() {

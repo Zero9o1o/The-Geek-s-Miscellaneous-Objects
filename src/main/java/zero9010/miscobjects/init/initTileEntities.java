@@ -8,7 +8,7 @@ import zero9010.miscobjects.tileEntity.TileEntityTent;
  */
 public class initTileEntities {
 
-    public static void init(){
+    public static void init() {
 
 
         GameRegistry.registerTileEntity(TileEntityTent.class, "TileEntityTent");

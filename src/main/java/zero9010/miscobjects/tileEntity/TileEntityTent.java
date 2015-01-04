@@ -4,8 +4,7 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityTent extends TileEntity {
 
-    public TileEntityTent(){
-
+    public TileEntityTent() {
 
 
     }

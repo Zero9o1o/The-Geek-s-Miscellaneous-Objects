@@ -9,36 +9,31 @@ import net.minecraftforge.common.util.EnumHelper;
 import zero9010.miscobjects.creativetab.creativeTab;
 import zero9010.miscobjects.reference.Reference;
 
-public class ItemMO extends Item
-{
-    public ItemMO ()
-    {
+public class ItemMO extends Item {
+    public ItemMO() {
         super();
         setCreativeTab(creativeTab.miscobjects);
     }
-    public static ToolMaterial IRONMO = EnumHelper.addToolMaterial("IRONMO",2,250,6.0F,1.5F,0);
+
+    public static ToolMaterial IRONMO = EnumHelper.addToolMaterial("IRONMO", 2, 250, 6.0F, 1.5F, 0);
 
     @Override
-    public String getUnlocalizedName()
-    {
+    public String getUnlocalizedName() {
         return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack itemStack)
-    {
+    public String getUnlocalizedName(ItemStack itemStack) {
         return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister)
-    {
+    public void registerIcons(IIconRegister iconRegister) {
         itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
     }
 
-    protected String getUnwrappedUnlocalizedName(String unlocalizedName)
-    {
+    protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
 

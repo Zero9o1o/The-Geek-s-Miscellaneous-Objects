@@ -6,9 +6,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import zero9010.miscobjects.creativetab.creativeTab;
+import zero9010.miscobjects.init.initBlocks;
 import zero9010.miscobjects.reference.ModelsID;
 import zero9010.miscobjects.reference.Names;
 import zero9010.miscobjects.reference.Reference;
@@ -18,37 +21,63 @@ public class BlockTent extends BlockContainer {
 
     public BlockTent() {
 
-        super(Material.dragonEgg);
+        super(Material.iron);
         setCreativeTab(creativeTab.miscobjects);
         setHardness(2f);
         setStepSound(Block.soundTypeMetal);
         setBlockName(Names.Block.TENT);
-        //setBlockBounds(0,0,0,1,1,2);
 
     }
 
     @Override
-    public boolean renderAsNormalBlock()
-    {
+    public boolean renderAsNormalBlock() {
 
         return false;
     }
 
     @Override
-    public int getRenderType()
-    {
+    public int getRenderType() {
 
         return ModelsID.MODELS_TENT_ID;
     }
 
     @Override
-    public boolean isOpaqueCube()
-    {
+    public boolean isOpaqueCube() {
         return false;
     }
 
     @Override
-    public String getUnlocalizedName(){
+    public int onBlockPlaced(World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ, int metadata)
+    {
+
+        if(!world.isRemote){
+
+            world.setBlock(x,y,z + 1, initBlocks.BoundingBoxFiller);
+
+        }
+
+        return metadata;
+    }
+
+    public void onBlockHarvested(World world, int x, int y, int z, int meta_I_think, EntityPlayer player)
+    {
+
+        if(!world.isRemote){
+
+            Block block = world.getBlock(x,y,z + 1);
+
+            if(block != null && block instanceof BlockBoundingBoxFiller){
+
+                world.setBlock(x,y,z + 1, Blocks.air);
+
+            }
+
+        }
+
+    }
+
+    @Override
+    public String getUnlocalizedName() {
 
         return String.format("tile.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
 
@@ -56,13 +85,13 @@ public class BlockTent extends BlockContainer {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister){
+    public void registerBlockIcons(IIconRegister iconRegister) {
 
         blockIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
 
     }
 
-    protected String getUnwrappedUnlocalizedName(String unlocalizedName){
+    protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
 
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
 

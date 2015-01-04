@@ -11,24 +11,24 @@ import zero9010.miscobjects.reference.Reference;
 /**
  * Created by Arceusthepokemon on 1/3/2015.
  */
-public class BlockMO extends Block{
+public class BlockMO extends Block {
 
-    public BlockMO(Material materital){
+    public BlockMO(Material materital) {
 
         super(materital);
         setCreativeTab(creativeTab.miscobjects);
 
     }
 
-    public BlockMO(){
+    public BlockMO() {
 
-        this(Material.dragonEgg);
+        this(Material.iron);
         setCreativeTab(creativeTab.miscobjects);
 
     }
 
     @Override
-    public String getUnlocalizedName(){
+    public String getUnlocalizedName() {
 
         return String.format("tile.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
 
@@ -36,13 +36,13 @@ public class BlockMO extends Block{
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister){
+    public void registerBlockIcons(IIconRegister iconRegister) {
 
         blockIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
 
     }
 
-    protected String getUnwrappedUnlocalizedName(String unlocalizedName){
+    protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
 
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
 

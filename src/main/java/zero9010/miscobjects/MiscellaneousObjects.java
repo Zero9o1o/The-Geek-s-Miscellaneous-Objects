@@ -13,14 +13,13 @@ import zero9010.miscobjects.proxy.CommonProxy;
 import zero9010.miscobjects.reference.Reference;
 
 @Mod(modid = Reference.MOD_ID, version = Reference.VERSION)
-public class MiscellaneousObjects
-{
+public class MiscellaneousObjects {
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
 
     @Mod.EventHandler
-    public void preinit(FMLPreInitializationEvent event){
+    public void preinit(FMLPreInitializationEvent event) {
 
         initItem.init();
         initBlocks.init();
@@ -28,7 +27,7 @@ public class MiscellaneousObjects
     }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent event){
+    public void init(FMLInitializationEvent event) {
 
         craftingRecipes.init();
         initTileEntities.init();
@@ -37,6 +36,6 @@ public class MiscellaneousObjects
     }
 
     @Mod.EventHandler
-    public void postinit(FMLPostInitializationEvent event){
+    public void postinit(FMLPostInitializationEvent event) {
     }
 }

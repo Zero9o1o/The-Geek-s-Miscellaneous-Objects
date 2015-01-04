@@ -15,7 +15,7 @@ public class initItem {
     public static final ItemSteakStrips ItemSteakStrips = new ItemSteakStrips();
     public static final ItemSteakBites ITEM_STEAK_BITES = new ItemSteakBites();
 
-    public static void init(){
+    public static void init() {
 
         GameRegistry.registerItem(ItemRation, Names.Items.RATION);
         GameRegistry.registerItem(ItemKnife, Names.Weapons.KNIFE);
