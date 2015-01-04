@@ -6,11 +6,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-import zero9010.miscobjects.init.craftingRecipes;
-import zero9010.miscobjects.init.initBlocks;
+import zero9010.miscobjects.init.*;
 import zero9010.miscobjects.proxy.CommonProxy;
 import zero9010.miscobjects.reference.Reference;
-import zero9010.miscobjects.init.initItem;
 
 @Mod(modid = Reference.MOD_ID, version = Reference.VERSION)
 public class MiscellaneousObjects
@@ -31,6 +29,7 @@ public class MiscellaneousObjects
     public void init(FMLInitializationEvent event){
 
         craftingRecipes.init();
+        initTileEntities.init();
         proxy.initRenderers();
 
     }
