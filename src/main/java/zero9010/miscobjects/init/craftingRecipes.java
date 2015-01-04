@@ -8,7 +8,7 @@ public class craftingRecipes {
 
     public static void init(){
 
-        GameRegistry.addRecipe(new ItemStack((initItem.ItemKnife), 1), new Object[]{"/  ", " x ", "  x", 'x', Items.iron_ingot, '/', Items.stick});
+        GameRegistry.addRecipe(new ItemStack((initItem.ItemKnife), 1), new Object[]{"/  ", " x ", "   ", 'x', Items.iron_ingot, '/', Items.stick});
 
     }
 
