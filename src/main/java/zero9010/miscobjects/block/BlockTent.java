@@ -12,7 +12,7 @@ import zero9010.miscobjects.creativetab.creativeTab;
 import zero9010.miscobjects.reference.ModelsID;
 import zero9010.miscobjects.reference.Names;
 import zero9010.miscobjects.reference.Reference;
-import zero9010.miscobjects.tileEntity.Tenttity;
+import zero9010.miscobjects.tileEntity.TileEntityTent;
 
 public class BlockTent extends BlockContainer {
 
@@ -23,6 +23,7 @@ public class BlockTent extends BlockContainer {
         setHardness(2f);
         setStepSound(Block.soundTypeMetal);
         setBlockName(Names.Block.TENT);
+        //setBlockBounds(0,0,0,1,1,2);
 
     }
 
@@ -38,6 +39,12 @@ public class BlockTent extends BlockContainer {
     {
 
         return ModelsID.MODELS_TENT_ID;
+    }
+
+    @Override
+    public boolean isOpaqueCube()
+    {
+        return false;
     }
 
     @Override
@@ -63,6 +70,6 @@ public class BlockTent extends BlockContainer {
 
     @Override
     public TileEntity createNewTileEntity(World world, int yoloint) {
-        return new Tenttity();
+        return new TileEntityTent();
     }
 }

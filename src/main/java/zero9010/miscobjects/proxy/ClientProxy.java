@@ -5,10 +5,10 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 import zero9010.miscobjects.client.render.item.ItemRenderTent;
-import zero9010.miscobjects.client.render.tileentity.TenttityRender;
+import zero9010.miscobjects.client.render.tileentity.RenderTileEntityTent;
 import zero9010.miscobjects.init.initBlocks;
 import zero9010.miscobjects.reference.ModelsID;
-import zero9010.miscobjects.tileEntity.Tenttity;
+import zero9010.miscobjects.tileEntity.TileEntityTent;
 
 public class ClientProxy extends CommonProxy{
 
@@ -24,7 +24,7 @@ public class ClientProxy extends CommonProxy{
 
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(initBlocks.Tent), new ItemRenderTent());
 
-        ClientRegistry.bindTileEntitySpecialRenderer(Tenttity.class, new TenttityRender());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTent.class, new RenderTileEntityTent());
 
     }
 

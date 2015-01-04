@@ -37,22 +37,22 @@ public class ItemRenderTent implements IItemRenderer{
         {
             case ENTITY:
             {
-                renderTent(0.0F, 1.5F, 0.5F, 180F);
+                renderTent(0.0F, 1.5F, 0.5F,0,0);
                 return;
             }
             case EQUIPPED:
             {
-                renderTent(1.0F, 3.5F, 1F, 180F);
+                renderTent(.5F, 1.2F, .5F,45f,1);
                 return;
             }
             case EQUIPPED_FIRST_PERSON:
             {
-                renderTent(1.0F, 3.50F, 1.0F, 180F);
+                renderTent(1.0F, 1.4F, 0.30F,0,0);
                 return;
             }
             case INVENTORY:
             {
-                renderTent(-0.6f, 1.4f, 0.1F, 180F);
+                renderTent(0.30f, 1.0f, 0.0F,0,0);
                 return;
             }
             default:
@@ -61,13 +61,13 @@ public class ItemRenderTent implements IItemRenderer{
         }
     }
 
-    private void renderTent(float x, float y, float z,float rotatae1)
+    private void renderTent(float x, float y, float z, float rotate,float rotatey)
     {
         GL11.glPushMatrix();
 
-        GL11.glScalef(.4F, .4F, .4F);
         GL11.glTranslatef(x, y, z);
-        GL11.glRotatef(rotatae1, 0, 0, 0);
+        GL11.glScalef(-0.4F, -0.4F, .4F);
+        GL11.glRotatef(rotate, 0, rotatey, 0);
 
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation("miscobjects:textures/models/Tent.png"));
 

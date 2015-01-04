@@ -1,14 +1,13 @@
 package zero9010.miscobjects.item;
 
-import net.minecraftforge.common.util.EnumHelper;
-import zero9010.miscobjects.reference.Reference;
-import zero9010.miscobjects.creativetab.creativeTab;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
+import zero9010.miscobjects.creativetab.creativeTab;
+import zero9010.miscobjects.reference.Reference;
 
 public class ItemMO extends Item
 {

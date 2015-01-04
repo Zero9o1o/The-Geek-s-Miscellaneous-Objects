@@ -5,8 +5,10 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-
-import zero9010.miscobjects.init.*;
+import zero9010.miscobjects.init.craftingRecipes;
+import zero9010.miscobjects.init.initBlocks;
+import zero9010.miscobjects.init.initItem;
+import zero9010.miscobjects.init.initTileEntities;
 import zero9010.miscobjects.proxy.CommonProxy;
 import zero9010.miscobjects.reference.Reference;
 
