@@ -3,8 +3,6 @@ package zero9010.miscobjects.init;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import zero9010.miscobjects.item.ItemKnife;
-import zero9010.miscobjects.item.ItemSteakStrips;
 
 public class craftingRecipes {
 
