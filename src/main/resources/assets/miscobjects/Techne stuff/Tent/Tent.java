@@ -8,7 +8,6 @@
 
 
 
-
 package net.minecraft.src;
 
 public class ModelNew extends ModelBase
