@@ -1,0 +1,16 @@
+[
+{
+  "modid": "miscobjects",
+  "name": "The Geeks's Miscellaneous Objects",
+  "description": "Example placeholder.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Zero","ArceusThePokemon","Fstobbsie "],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
