@@ -9,7 +9,7 @@ import zero9010.miscobjects.creativetab.creativeTab;
 import zero9010.miscobjects.reference.Names;
 import zero9010.miscobjects.reference.Reference;
 
-public class ItemRation  extends ItemFood{
+public class ItemRation extends ItemFood{
     public ItemRation()
     {
         super(2, 0.3F,false);
