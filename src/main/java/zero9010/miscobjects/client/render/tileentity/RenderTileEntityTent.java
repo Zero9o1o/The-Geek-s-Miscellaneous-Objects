@@ -19,13 +19,38 @@ public class RenderTileEntityTent extends TileEntitySpecialRenderer {
         GL11.glTranslatef((float) x + 0.5f, (float) y + 1.50f, (float) z + 0.50009f);
 
         GL11.glScalef(-0.625F, -0.625F, 0.625f);
-        GL11.glRotatef(0f, 0, 0, 0);
+
+        GL11.glRotatef(GL_DONT_HATE_ME(tileEntity), 0, 1, 0);
+
+        //GL_DONT_HATE_ME(tileEntity);
 
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation("miscobjects:textures/models/Tent.png"));
 
         Tent.render(1F, 1F, 1F, 1F, 1F, 0.1F);
 
         GL11.glPopMatrix();
+
+    }
+
+    private float GL_DONT_HATE_ME(TileEntity tileEntity){
+
+        switch (tileEntity.blockMetadata) {
+            case 0: {
+                return 180f;
+            }
+            case 1: {
+                return 90f;
+            }
+            case 2: {
+                return 0f;
+            }
+            case 3: {
+                return 270f;
+            }
+            default: {
+                return 15f;
+            }
+        }
 
     }
 }

@@ -5,7 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
-import zero9010.miscobjects.init.initBlocks;
+import zero9010.miscobjects.init.initItem;
 import zero9010.miscobjects.reference.Names;
 
 import java.util.Random;
@@ -30,7 +30,7 @@ public class BlockBoundingBoxFiller extends BlockMO {
 
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-        return Item.getItemFromBlock(initBlocks.Tent);
+        return initItem.ItemTent;
     }
 
     public void onBlockHarvested(World world, int x, int y, int z, int meta_I_think, EntityPlayer player)

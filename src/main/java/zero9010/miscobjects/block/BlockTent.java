@@ -4,21 +4,21 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
 import zero9010.miscobjects.creativetab.creativeTab;
-import zero9010.miscobjects.init.initBlocks;
+import zero9010.miscobjects.init.initItem;
 import zero9010.miscobjects.reference.ModelsID;
 import zero9010.miscobjects.reference.Names;
 import zero9010.miscobjects.reference.Reference;
 import zero9010.miscobjects.tileEntity.TileEntityTent;
+
+import java.util.Random;
 
 public class BlockTent extends BlockContainer {
 
@@ -49,28 +49,6 @@ public class BlockTent extends BlockContainer {
         return false;
     }
 
-    @Override
-    public int onBlockPlaced(World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ, int metadata)
-    {
-
-        if(!world.isRemote){
-
-            if(world.isAirBlock(x,y,z) && world.isAirBlock(x,y,z + 1)){
-
-                world.setBlock(x,y,z + 1, initBlocks.BoundingBoxFiller);
-
-            }else{
-
-                world.setBlock(x,y,z, Blocks.air);
-                dropBlockAsItem(world,x,y,z,new ItemStack(initBlocks.Tent));
-
-            }
-
-        }
-
-        return metadata;
-    }
-
     public void onBlockHarvested(World world, int x, int y, int z, int meta_I_think, EntityPlayer player)
     {
 
@@ -86,6 +64,11 @@ public class BlockTent extends BlockContainer {
 
         }
 
+    }
+
+    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+    {
+        return initItem.ItemTent;
     }
 
     @Override
