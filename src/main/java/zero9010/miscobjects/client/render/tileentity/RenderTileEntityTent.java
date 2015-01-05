@@ -48,7 +48,7 @@ public class RenderTileEntityTent extends TileEntitySpecialRenderer {
                 return 270f;
             }
             default: {
-                return 15f;
+                return 45f;
             }
         }
 
