@@ -9,7 +9,7 @@
 
 
 
-package net.minecraft.src;
+package main.Techne;
 
 public class ModelNew extends ModelBase
 {
