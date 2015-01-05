@@ -4,11 +4,14 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
+import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
 import zero9010.miscobjects.creativetab.creativeTab;
 import zero9010.miscobjects.init.initBlocks;
@@ -25,7 +28,7 @@ public class BlockTent extends BlockContainer {
         setCreativeTab(creativeTab.miscobjects);
         setHardness(2f);
         setStepSound(Block.soundTypeMetal);
-        setBlockName(Names.Block.TENT);
+        setBlockName(Names.Block.BLOCKTENT);
 
     }
 
@@ -52,7 +55,16 @@ public class BlockTent extends BlockContainer {
 
         if(!world.isRemote){
 
-            world.setBlock(x,y,z + 1, initBlocks.BoundingBoxFiller);
+            if(world.isAirBlock(x,y,z) && world.isAirBlock(x,y,z + 1)){
+
+                world.setBlock(x,y,z + 1, initBlocks.BoundingBoxFiller);
+
+            }else{
+
+                world.setBlock(x,y,z, Blocks.air);
+                dropBlockAsItem(world,x,y,z,new ItemStack(initBlocks.Tent));
+
+            }
 
         }
 

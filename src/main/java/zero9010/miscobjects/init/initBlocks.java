@@ -15,7 +15,7 @@ public class initBlocks {
 
     public static void init() {
 
-        GameRegistry.registerBlock(Tent, Names.Block.TENT);
+        GameRegistry.registerBlock(Tent, Names.Block.BLOCKTENT);
         GameRegistry.registerBlock(BoundingBoxFiller, Names.Block.BOUNDINGBOXFILLER);
 
     }

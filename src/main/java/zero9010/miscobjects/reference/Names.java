@@ -6,11 +6,11 @@ public final class Names {
         public static final String TOAST = "Toast";
         public static final String STEAKSTRIPS = "SteakStrips";
         public static final String STEAKBITES = "SteakBites";
-        public static final String TENT = "TENT";
+        public static final String ITEMTENT = "ItemTent";
     }
 
     public static final class Block {
-        public static final String TENT = "Tent";
+        public static final String BLOCKTENT = "BlockTent";
         public static final String BOUNDINGBOXFILLER = "BlockBoundingBoxFiller";
     }
 

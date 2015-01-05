@@ -3,8 +3,9 @@ item.miscobjects:Knife.name=Knife
 item.miscobjects:Toast.name=Toast
 item.miscobjects:SteakStrips.name=Steak Strips
 item.miscobjects:SteakBites.name=Steak Bites
+item.miscobjects:ItemTent.name=Restart Tent
 
 
-tile.miscobjects:Tent.name=Restart Tent
+tile.miscobjects:BlockTent.name=Restart Tent
 
 key.categories.miscobjects=The Geeks's Miscellaneous Objects
