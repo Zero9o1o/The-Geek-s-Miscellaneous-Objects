@@ -16,9 +16,9 @@ public class ItemTent extends ItemMO{
 
     }
 
-    public boolean onItemUse(ItemStack itemstack, EntityPlayer player, World work, int x, int y, int z, int side, float hitX, float hitY, float hitZ)
+    public boolean onItemUse(ItemStack itemstack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ)
     {
-        if (work.isRemote)
+        if (world.isRemote)
         {
             return true;
         }
@@ -53,15 +53,13 @@ public class ItemTent extends ItemMO{
                 b0 = 1;
             }
 
-            if (player.canPlayerEdit(x, y,z, side, itemstack) && player.canPlayerEdit(x + b0, y,z + b1, side, itemstack))
-            {
-                if (work.isAirBlock(x, y,z) && work.isAirBlock(x + b0, y,z + b1) && World.doesBlockHaveSolidTopSurface(work, x, y - 1,z) && World.doesBlockHaveSolidTopSurface(work, x + b0, y - 1,z + b1))
+                if (world.isAirBlock(x, y,z) && world.isAirBlock(x + b0, y,z + b1))
                 {
-                    work.setBlock(x, y,z,initBlocks.Tent);
+                    world.setBlock(x, y,z,initBlocks.Tent,i1,2);
 
-                    if (work.getBlock(x, y,z) == initBlocks.Tent)
+                    if (world.getBlock(x, y,z) == initBlocks.Tent)
                     {
-                        work.setBlock(x + b0, y,z + b1, initBlocks.BoundingBoxFiller);
+                        world.setBlock(x + b0, y,z + b1, initBlocks.BoundingBoxFiller,i1,2);
                     }
 
                     --itemstack.stackSize;
@@ -71,11 +69,6 @@ public class ItemTent extends ItemMO{
                 {
                     return false;
                 }
-            }
-            else
-            {
-                return false;
-            }
         }
     }
 

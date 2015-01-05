@@ -6,6 +6,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import zero9010.miscobjects.client.render.model.Tent;
+import zero9010.miscobjects.tileEntity.TileEntityTent;
 
 public class RenderTileEntityTent extends TileEntitySpecialRenderer {
 
@@ -18,11 +19,11 @@ public class RenderTileEntityTent extends TileEntitySpecialRenderer {
 
         GL11.glTranslatef((float) x + 0.5f, (float) y + 1.50f, (float) z + 0.50009f);
 
-        GL11.glScalef(-0.625F, -0.625F, 0.625f);
+        GL11.glScalef(-0.625F, -0.624F, 0.625f);
 
-        GL11.glRotatef(GL_DONT_HATE_ME(tileEntity), 0, 1, 0);
+        TileEntityTent tileEntityTent = (TileEntityTent)tileEntity;
 
-        //GL_DONT_HATE_ME(tileEntity);
+        GL11.glRotatef(GL_DONT_HATE_ME(tileEntityTent), 0, 1, 0);
 
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation("miscobjects:textures/models/Tent.png"));
 
@@ -32,23 +33,41 @@ public class RenderTileEntityTent extends TileEntitySpecialRenderer {
 
     }
 
-    private float GL_DONT_HATE_ME(TileEntity tileEntity){
+    private float GL_DONT_HATE_ME(TileEntityTent tileEntityTent){
 
-        switch (tileEntity.blockMetadata) {
+        switch (tileEntityTent.getBlockMetadata()) {
             case 0: {
-                return 180f;
+                return 0f;
             }
             case 1: {
                 return 90f;
             }
             case 2: {
-                return 0f;
+                return 180f;
             }
             case 3: {
                 return 270f;
             }
             default: {
-                return 45f;
+
+                switch (tileEntityTent.getBetterMetaData()) {
+                    case 0: {
+                        return 0f;
+                    }
+                    case 1: {
+                        return 90f;
+                    }
+                    case 2: {
+                        return 180f;
+                    }
+                    case 3: {
+                        return 270f;
+                    }
+                    default: {
+                        return 45f;
+                    }
+                }
+
             }
         }
 

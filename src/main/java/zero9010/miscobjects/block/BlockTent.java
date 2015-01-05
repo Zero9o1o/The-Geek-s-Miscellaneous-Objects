@@ -49,16 +49,35 @@ public class BlockTent extends BlockContainer {
         return false;
     }
 
-    public void onBlockHarvested(World world, int x, int y, int z, int meta_I_think, EntityPlayer player)
+    public void onBlockHarvested(World world, int x, int y, int z, int meta, EntityPlayer player)
     {
 
         if(!world.isRemote){
 
-            Block block = world.getBlock(x,y,z + 1);
+            byte b0 = 0;
+            byte b1 = 0;
+
+            if (meta == 0) {
+                b1 = 1;
+            }
+
+            if (meta == 1) {
+                b0 = -1;
+            }
+
+            if (meta == 2) {
+                b1 = -1;
+            }
+
+            if (meta == 3) {
+                b0 = 1;
+            }
+
+            Block block = world.getBlock(x + b0,y,z + b1);
 
             if(block != null && block instanceof BlockBoundingBoxFiller){
 
-                world.setBlock(x,y,z + 1, Blocks.air);
+                world.setBlock(x + b0,y,z + b1, Blocks.air);
 
             }
 
