@@ -6,6 +6,7 @@ import net.minecraft.tileentity.TileEntity;
 public class TileEntityTent extends TileEntity {
 
     int metaData = -1;
+    private boolean PlayerInTent = false;
 
     public TileEntityTent() {
 
@@ -25,12 +26,19 @@ public class TileEntityTent extends TileEntity {
 
     }
 
+    public boolean getPlayerInTent(){
+
+        return PlayerInTent;
+
+    }
+
     @Override
     public void writeToNBT(NBTTagCompound compound){
 
         super.writeToNBT(compound);
 
         compound.setInteger("metaData",metaData);
+        compound.setBoolean("playerInTent", PlayerInTent);
 
     }
 
@@ -39,6 +47,7 @@ public class TileEntityTent extends TileEntity {
 
         super.readFromNBT(compound);
         metaData = compound.getInteger("metaData");
+        PlayerInTent = compound.getBoolean("playerInTent");
 
     }
 
